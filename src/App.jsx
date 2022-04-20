@@ -1,15 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import AddSong from "./pages/AddSong/AddSong";
 import Home from "./pages/Home/Home";
-import Songs from "./pages/Songs/Songs";
+import SongInfo from "./pages/SongInfo/SongInfo";
+import data from "./data/data";
 import "./styles/main.scss";
 
 const App = () => {
   return (
     <Routes>
       <Route path="*" element={<Home />} />
-      <Route path="/songs" element={<Songs />} />
-      <Route path="/songs/add" element={<AddSong />} />
+      <Route path="/song/:songId" element={<SongInfo songsArr={data} />} />
+      <Route path="/song/add" element={<AddSong />} />
     </Routes>
   );
 };
