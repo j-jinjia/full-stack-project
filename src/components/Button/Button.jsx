@@ -1,12 +1,8 @@
 import React from "react";
 import "./Button.scss";
 const Button = (props) => {
-  const { handleClick, className, text } = props;
-  return (
-    <button className={className} onClick={handleClick}>
-      {text}
-    </button>
-  );
+  const { className, link } = props;
+  return <div className={className}>{link}</div>;
 };
 
 export default Button;

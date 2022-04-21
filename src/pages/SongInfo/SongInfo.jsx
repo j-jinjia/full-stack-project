@@ -3,6 +3,8 @@ import React from "react";
 import { useParams } from "react-router";
 import ReactPlayer from "react-player/youtube";
 import "./SongInfo.scss";
+import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 const SongInfo = (props) => {
   const { songsArr } = props;
@@ -22,6 +24,8 @@ const SongInfo = (props) => {
         </div>
         <p>Added by {name}</p>
       </div>
+
+      <Button className={"buttons-exit"} link={<Link to={"/"}>Exit</Link>} />
     </Layout>
   );
 };
