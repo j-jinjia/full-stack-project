@@ -1,7 +1,7 @@
 import Button from "../../components/Button/Button";
 import CardList from "../../components/CardList/CardList";
 import Layout from "../../components/Layout/Layout";
-import data from "../../data/data";
+// import data from "../../data/data";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
