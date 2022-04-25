@@ -7,10 +7,11 @@ import { useEffect, useState } from "react";
 
 const Home = () => {
   const [songs, setSongs] = useState([]);
-  const url = "https://full-stack-project-songs.nw.r.appspot.com/api/songs";
+  const targetUrl =
+    "https://full-stack-project-songs.nw.r.appspot.com/api/songs";
 
   const getSongs = async () => {
-    const res = await fetch(url);
+    const res = await fetch(targetUrl);
     const data = await res.json();
     setSongs(data);
   };
@@ -22,11 +23,11 @@ const Home = () => {
     <Layout>
       <h1>Music Store</h1>
       <p>Find out what is the world listening to</p>
-      <CardList cardData={songs} />
       <Button
         className={"button"}
         link={<Link to={"/song/add"}>Add Song</Link>}
       />
+      <CardList cardData={songs} />
     </Layout>
   );
 };
