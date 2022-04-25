@@ -38,46 +38,53 @@ const AddSong = () => {
         <input
           type="text"
           value={fullName}
+          required
           onChange={(e) => setFullName(e.target.value)}
         />
         <label htmlFor="">Song</label>
         <input
           type="text"
           value={song}
+          required
           onChange={(e) => setSong(e.target.value)}
         />
         <label htmlFor="">Genre</label>
         <input
           type="text"
           value={genre}
+          required
           onChange={(e) => setGenre(e.target.value)}
         />
         <label htmlFor="">Album</label>
         <input
           type="text"
           value={album}
+          required
           onChange={(e) => setAlbum(e.target.value)}
         />
         <label htmlFor="">Artist</label>
         <input
           type="text"
           value={artist}
+          required
           onChange={(e) => setArtist(e.target.value)}
         />
         <label htmlFor="">Youtube Link</label>
         <input
           type="text"
           value={ytURL}
+          required
           onChange={(e) => setYtUrl(e.target.value)}
         />
         <label htmlFor="">Album Image Link</label>
         <input
           type="text"
           value={imageURL}
+          required
           onChange={(e) => setImageURL(e.target.value)}
         />
         {!isPending && <button>Add Song</button>}
-        {isPending && <button disabled>Adding Song..-</button>}
+        {isPending && <button disabled>Adding Song...</button>}
       </form>
       <Button className={"button"} link={<Link to={"/"}>Back to home</Link>} />
     </Layout>

@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const SongInfo = (props) => {
   const { songsArr } = props;
   const { songId } = useParams();
-  const currentSong = songsArr.find((song) => song.id.toString() === songId);
-  const { name, song, genre, artist, ytURL, album } = currentSong;
+  const songs = songsArr.find((song) => song.id.toString() === songId);
+  const { name, song, genre, artist, ytURL, album } = songs;
 
   return (
     <Layout>
