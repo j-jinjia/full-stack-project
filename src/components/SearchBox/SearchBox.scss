@@ -1,0 +1,10 @@
+.search-box {
+  .search-box__input {
+    width: min-content;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    &:focus {
+      border: 2px solid black;
+    }
+  }
+}
