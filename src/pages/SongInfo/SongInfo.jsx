@@ -10,8 +10,9 @@ const SongInfo = (props) => {
   const { songsArr } = props;
   const { songId } = useParams();
   const songs = songsArr.find((song) => song.id.toString() === songId);
-  const { name, song, genre, artist, ytURL, album } = songs;
+  const { fullName, song, genre, artist, ytURL, album, addDate } = songs;
 
+  const shortenedDate = addDate.split("T")[0];
   return (
     <Layout>
       <div className="song-info">
@@ -22,7 +23,9 @@ const SongInfo = (props) => {
         <div className="song-info__react-wrapper">
           <ReactPlayer className="song-info__react-player" url={ytURL} />
         </div>
-        <p>Added by {name}</p>
+        <p>
+          Added by {fullName} on {shortenedDate}
+        </p>
       </div>
 
       <Button className={"buttons-exit"} link={<Link to={"/"}>Exit</Link>} />

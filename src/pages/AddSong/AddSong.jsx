@@ -21,7 +21,7 @@ const AddSong = () => {
     e.preventDefault();
     const newSong = { fullName, song, genre, album, artist, ytURL, imageURL };
     setIsPending(true);
-    fetch("http://full-stack-project-songs.nw.r.appspot.com/song/add", {
+    fetch("https://full-stack-project-songs.nw.r.appspot.com/song/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newSong),

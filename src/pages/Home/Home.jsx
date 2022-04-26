@@ -3,20 +3,14 @@ import CardList from "../../components/CardList/CardList";
 import Layout from "../../components/Layout/Layout";
 // import data from "../../data/data";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import "./Home.scss";
 
-const Home = () => {
-  const [songs, setSongs] = useState([]);
+const Home = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const targetUrl =
-    "https://full-stack-project-songs.nw.r.appspot.com/api/songs";
 
-  const getSongs = async () => {
-    const res = await fetch(targetUrl);
-    const data = await res.json();
-    setSongs(data);
-  };
+  const { songArr } = props;
 
   //searchBar
   const handleInput = (event) => {
@@ -24,20 +18,17 @@ const Home = () => {
     setSearchTerm(cleanInput);
   };
 
-  const filteredSongs = songs.filter((song) => {
+  const filteredSongs = songArr.filter((song) => {
     const songNameLower = song.artist.toLowerCase();
     return songNameLower.includes(searchTerm);
   });
 
-  useEffect(() => {
-    getSongs();
-  }, []);
   return (
     <Layout>
-      <h1>Music Store</h1>
-      <p>Find out what is the world listening to</p>
+      <h1 className="home__title">Music Store</h1>
+      <p className="home__sub-title">Find out what is the world listening to</p>
       <Button
-        className={"button"}
+        className={"home__button"}
         link={<Link to={"/song/add"}>Add Song</Link>}
       />
       <SearchBox

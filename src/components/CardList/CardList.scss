@@ -1,11 +1,24 @@
 .card-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   padding: 2rem;
 }
 
 .song-image {
   width: 10rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
+
+  .song-image {
+    width: 10rem;
+  }
 }

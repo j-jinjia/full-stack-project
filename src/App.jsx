@@ -20,7 +20,7 @@ const App = () => {
   }, []);
   return (
     <Routes>
-      <Route path="*" element={<Home />} />
+      <Route path="*" element={<Home songArr={songInfo} />} />
       <Route path="/song/:songId" element={<SongInfo songsArr={songInfo} />} />
       <Route path="/song/add" element={<AddSong />} />
     </Routes>
