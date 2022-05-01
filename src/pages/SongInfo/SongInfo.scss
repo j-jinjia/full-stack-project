@@ -1,9 +1,41 @@
-.song-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@use "../../styles/variables" as *;
+.layout {
+  height: 100vh;
+  .song-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    background-color: rgba(236, 236, 236, 0.1);
+    height: 100%;
 
-  border: 1px solid black;
-  margin: auto;
-  padding: 2rem;
+    .song-info__react-wrapper {
+      width: 60%;
+      height: 30%;
+    }
+    .song-info__react-player {
+      width: 100%;
+    }
+    .song-info__controls-button {
+      color: black;
+    }
+  }
+  @media only screen and (min-width: $desktop-breakpoint) {
+    .layout {
+      .song-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .song-info__react-wrapper {
+          width: 50%;
+          height: 60%;
+        }
+        .song-info__react-player {
+          height: 100%;
+        }
+      }
+    }
+  }
 }

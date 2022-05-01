@@ -25,12 +25,14 @@ const Home = (props) => {
 
   return (
     <Layout>
-      <h1 className="home__title">Music Store</h1>
-      <p className="home__sub-title">Find out what is the world listening to</p>
-      <Button
-        className={"home__button"}
-        link={<Link to={"/song/add"}>Add Song</Link>}
-      />
+      <div className="home">
+        <h1 className="home__title">Music Store</h1>
+        <Button
+          className={"home__button"}
+          link={<Link to={"/song/add"}>Add Song</Link>}
+        />
+      </div>
+      <p className="sub-title">Find out what is the world listening to</p>
       <SearchBox
         label="Search"
         searchTerm={searchTerm}

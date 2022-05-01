@@ -1,9 +1,11 @@
+@use "../../styles/_variables.scss" as *;
 .card-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
+  gap: 2rem;
   padding: 2rem;
 }
 
@@ -11,11 +13,11 @@
   width: 10rem;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: $desktop-breakpoint) {
   .card-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .song-image {
