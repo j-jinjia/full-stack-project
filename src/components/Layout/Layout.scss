@@ -5,14 +5,3 @@
   color: white;
   padding: 1rem;
 }
-@media only screen and (min-width: $desktop-breakpoint) {
-  .card-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
-  }
-
-  .song-image {
-    width: 10rem;
-  }
-}

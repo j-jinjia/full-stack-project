@@ -7,8 +7,10 @@ import "./styles/main.scss";
 
 const App = () => {
   const [songInfo, setSongsInfo] = useState([]);
-  const targetUrl =
-    "https://full-stack-project-songs.nw.r.appspot.com/api/songs";
+  const targetUrl = "http://localhost:8080/api/songs";
+
+  //https://full-stack-project-songs.nw.r.appspot.com/api/songs
+  //https://localhost:8080/api/songs
 
   const getSongInfo = async () => {
     const res = await fetch(targetUrl);
