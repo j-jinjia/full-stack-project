@@ -7,10 +7,26 @@
   margin: auto;
   gap: 2rem;
   padding: 2rem;
-}
-
-.song-image {
-  width: 10rem;
+  .song {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    &:hover {
+      background-color: #282828;
+    }
+    .song__image {
+      width: 10rem;
+    }
+    .song__title {
+      text-align: center;
+      text-decoration: none;
+      max-width: 10rem;
+    }
+  }
 }
 
 @media only screen and (min-width: $desktop-breakpoint) {
@@ -18,6 +34,8 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
+    justify-items: center;
+    align-items: stretch;
   }
 
   .song-image {

@@ -14,7 +14,7 @@ const data = [
     id: 2,
     name: "Drake",
     song: "The Real Slim Shady",
-    genre: "Rap",
+    genre: "Hip-Hop/Rap",
     artist: "Eminem",
     ytURL: "https://www.youtube.com/watch?v=eJO5HU_7_1w&ab_channel=EminemVEVO",
     imageURL:

@@ -1,40 +1,148 @@
 @use "../../styles/variables" as *;
-.layout {
-  height: 100vh;
+.song-info-page {
+  background: url(../../assets/images/background.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 1rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    &__button {
+      color: white;
+      padding: 0.5rem;
+      border-radius: 5rem;
+      background-color: #121212;
+      border: 2px solid white;
+
+      cursor: pointer;
+      &:hover {
+        background-color: #1ca74e;
+      }
+    }
+  }
   .song-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: auto;
-    background-color: rgba(236, 236, 236, 0.1);
-    height: 100%;
+    justify-content: center;
+    gap: 5rem;
+    .player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__react-wrapper {
+        width: 300px;
+      }
+      &__react-player {
+        width: 100%;
+      }
+    }
+    &__controls {
+      background-color: #505050;
+      padding: 1rem;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .song-info__controls-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
 
-    .song-info__react-wrapper {
-      width: 60%;
-      height: 30%;
-    }
-    .song-info__react-player {
-      width: 100%;
-    }
-    .song-info__controls-button {
-      color: black;
+        .song-info__controls-button {
+          color: black;
+          padding: 0.5rem;
+          border-radius: 5rem;
+          border: none;
+          cursor: pointer;
+          background-color: #1ca74e;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
     }
   }
 }
+
 @media only screen and (min-width: 1024px) {
-  .layout {
+  .song-info-page {
+    height: 100vh;
+    padding: 1rem;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      &__button {
+        color: white;
+        padding: 0.5rem;
+        border-radius: 5rem;
+
+        border: 2px solid white;
+
+        cursor: pointer;
+        &:hover {
+          background-color: #1ca74e;
+        }
+      }
+    }
     .song-info {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-
-      .song-info__react-wrapper {
-        width: 50%;
-        height: 60%;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      padding-top: 4rem;
+      .player {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__react-wrapper {
+          width: 400px;
+          height: 250px;
+        }
+        &__react-player {
+          width: 100%;
+        }
       }
-      .song-info__react-player {
-        width: 100%;
+      &__controls {
+        background-color: #505050;
+        padding: 1rem;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .song-info__controls-buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+
+          .song-info__controls-button {
+            color: black;
+            padding: 0.5rem;
+            border-radius: 5rem;
+            border: none;
+            cursor: pointer;
+            background-color: #1ca74e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      .song-info__content {
+        background-color: #505050;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
       }
     }
   }

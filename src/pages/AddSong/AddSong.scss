@@ -1,5 +1,63 @@
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.add-song {
+  background: url(../../assets/images/background.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 1rem;
+
+  &__header {
+    display: inline-block;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    .add-song__sub-title {
+      padding: 1rem;
+    }
+  }
+  .add-song__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(237, 237, 237, 0.302);
+    width: 300px;
+    gap: 0.5rem;
+    padding: 1rem;
+    input {
+      border-radius: 1rem;
+      padding: 0.2rem;
+      width: 250px;
+    }
+  }
+  .add-song__form-btn {
+    padding: 0.5rem;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 5rem;
+    background-color: white;
+    border: 2px solid #121212;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #1ca74e;
+    }
+    &--loading {
+      background-color: rgba(236, 236, 236, 0.3);
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .add-song {
+    .add-song__form {
+      width: 500px;
+    }
+  }
 }

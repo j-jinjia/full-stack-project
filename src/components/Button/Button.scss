@@ -1,4 +1,40 @@
 .home__button > * {
   color: white;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  background-color: #121212;
+  border: 2px solid white;
+  cursor: pointer;
   text-decoration: none;
+  &:hover {
+    background-color: #1ca74e;
+  }
 }
+.buttons-exit > * {
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  background-color: #121212;
+  border: 2px solid white;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #1ca74e;
+  }
+}
+.add-song__button-home {
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  background-color: #121212;
+  border: 2px solid white;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #1ca74e;
+  }
+}
+
+//could probably do a mixin here
