@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Full Stack Project App - Nologyfy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is created using React. Here's a link to the live site:
 
-## Available Scripts
+- https://j-jinjia.github.io/full-stack-project/
 
-In the project directory, you can run:
+The aims of this project were to practice React fundamentals(React components, props, functions as props) as well using SpringBoot, Java , MySQL and GCP(Google Cloud Platform) to create a full stack project.
 
-### `npm start`
+# ABOUT
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This music app was created using:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Functinality and Layout: JSX and SASS (SCSS, and BEM notation)
+  -Backend server: SpringBoot, Java, MySQL and Google Cloud Platform
 
-### `npm test`
+It has a responsive design for:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Mobile devices and tablets up to 768px
+- Tablets and small laptops up to 1024px
+- Pc monitors and larger devices from 1024px
 
-### `npm run build`
+# Functionality
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This website can be navigated as follows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Wait for the data to be fetched from the server
+- Click on each image to see more information about the song
+- Inside each image, there's a youtube video with information about the song.
+- Click on the add button to add a song of your own.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Features
 
-### `npm run eject`
+In this website you can:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Add a song to the website
+- Delete a song from the website
+- Search for an artist within the website
+- Reproduce a youtube video with custom controls.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Preview
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Nologyfy Home](./src/assets/images/screenshots/home.png)
+![Nologyfy SongInfo](./src/assets/images/screenshots/info.png)
+![Nologyfy AddSong](./src/assets/images/screenshots/form.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Improvements
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Organize songs in home page by genre
+- Improve custom controls on youtube video preview.
+- Be able to search by artist, song or genre. (Currently only artist)
+- Add filters by genre, release date.
+- General code refactor

@@ -1,10 +1,4 @@
 .add-song {
-  background: url(../../assets/images/background.jpg) no-repeat center center
-    fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   padding: 1rem;
 
   &__header {
@@ -16,8 +10,12 @@
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    .add-song__title {
+      font-size: 3rem;
+    }
     .add-song__sub-title {
       padding: 1rem;
+      font-size: 2rem;
     }
   }
   .add-song__form {
@@ -25,10 +23,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(237, 237, 237, 0.302);
+    background-color: rgb(21, 11, 11, 0.5);
+    border-radius: 10px;
     width: 300px;
     gap: 0.5rem;
     padding: 1rem;
+    label {
+      font-weight: bold;
+    }
     input {
       border-radius: 1rem;
       padding: 0.2rem;
@@ -42,6 +44,7 @@
     border-radius: 5rem;
     background-color: white;
     border: 2px solid #121212;
+    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
 
@@ -49,7 +52,7 @@
       background-color: #1ca74e;
     }
     &--loading {
-      background-color: rgba(236, 236, 236, 0.3);
+      background-color: rgb(21, 11, 11, 0.5);
     }
   }
 }

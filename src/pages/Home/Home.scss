@@ -1,12 +1,4 @@
 .home {
-  background: url(../../assets/images/background.jpg) no-repeat center center
-    fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-
   padding: 1rem;
   &__header {
     display: flex;
@@ -29,10 +21,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .card-list {
-    &:hover ~ .home {
-      background-color: red;
-    }
   }
 }

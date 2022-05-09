@@ -1,2 +1,10 @@
 @use "./reset" as *;
 @use "./typography" as *;
+body {
+  background: url(../assets/images/background0.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

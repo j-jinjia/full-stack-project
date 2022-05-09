@@ -1,13 +1,6 @@
 @use "../../styles/variables" as *;
 .song-info-page {
-  background: url(../../assets/images/background.jpg) no-repeat center center
-    fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   padding: 1rem;
-
   .header {
     display: flex;
     justify-content: space-between;
@@ -19,7 +12,7 @@
       border-radius: 5rem;
       background-color: #121212;
       border: 2px solid white;
-
+      display: flex;
       cursor: pointer;
       &:hover {
         background-color: #1ca74e;
@@ -44,7 +37,7 @@
       }
     }
     &__controls {
-      background-color: #505050;
+      background-color: rgb(21, 11, 11, 0.5);
       padding: 1rem;
       width: 300px;
       display: flex;
@@ -68,38 +61,29 @@
         }
       }
     }
+    .song-info__content {
+      background-color: rgb(21, 11, 11, 0.5);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      gap: 1rem;
+    }
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .song-info-page {
-    height: 100vh;
-    padding: 1rem;
     .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       padding: 1rem;
-      &__button {
-        color: white;
-        padding: 0.5rem;
-        border-radius: 5rem;
-
-        border: 2px solid white;
-
-        cursor: pointer;
-        &:hover {
-          background-color: #1ca74e;
-        }
-      }
     }
     .song-info {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
       gap: 5rem;
-      padding-top: 4rem;
+      padding-top: 2rem;
       .player {
         display: flex;
         flex-direction: column;
@@ -113,37 +97,16 @@
         }
       }
       &__controls {
-        background-color: #505050;
-        padding: 1rem;
         width: 400px;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        .song-info__controls-buttons {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-
-          .song-info__controls-button {
-            color: black;
-            padding: 0.5rem;
-            border-radius: 5rem;
-            border: none;
-            cursor: pointer;
-            background-color: #1ca74e;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        }
-      }
-      .song-info__content {
-        background-color: #505050;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
       }
     }
+    .song-info__content {
+      justify-content: space-around;
+    }
+  }
+}
+@media only screen and (min-width: 1205px) {
+  .song-info {
+    padding-top: 4rem;
   }
 }
